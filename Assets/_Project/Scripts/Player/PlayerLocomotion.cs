@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 /// <summary>
 /// Moves the character with a CharacterController using camera relative input.
 /// Gravity and jumping are handled manually because CharacterController
@@ -28,6 +29,18 @@ public class PlayerLocomotion : MonoBehaviour
     private float _currentSpeed;
     private float _verticalVelocity;
     private float _rotationVelocity;
+
+    // Current movement speed, used to drive the locomotion blend tree 
+    public float CurrentSpeed => _currentSpeed;
+
+    // True while the capsule is touching the ground 
+    public bool IsGrounded => _controller.isGrounded;
+
+    // Negative while falling, positive right after a jump 
+    public float VerticalVelocity => _verticalVelocity;
+
+    // Raised once at the exact frame a jump starts 
+    public event Action OnJumped;
 
     private void Awake()
     {
@@ -113,6 +126,9 @@ public class PlayerLocomotion : MonoBehaviour
         {
             // v = sqrt(h * -2 * g) is the velocity required to reach the desired height
             _verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+            // Notify listeners such as the animator controller 
+            OnJumped?.Invoke();
         }
     }
 }
