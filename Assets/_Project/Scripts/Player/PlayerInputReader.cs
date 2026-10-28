@@ -22,6 +22,9 @@ public class PlayerInputReader : MonoBehaviour
     // True only on the single frame the jump key was pressed
     public bool JumpPressed { get; private set; }
 
+    // True only on the single frame the attack button was pressed 
+    public bool AttackPressed { get; private set; }
+
     private GameInput _gameInput;
 
     private void Awake()
@@ -46,5 +49,6 @@ public class PlayerInputReader : MonoBehaviour
         ZoomInput = _gameInput.Player.Zoom.ReadValue<float>();
         SprintHeld = _gameInput.Player.Sprint.IsPressed();
         JumpPressed = _gameInput.Player.Jump.WasPressedThisFrame();
+        AttackPressed = _gameInput.Player.Attack.WasPressedThisFrame();
     }
 }
