@@ -25,6 +25,9 @@ public class PlayerInputReader : MonoBehaviour
     // True only on the single frame the attack button was pressed 
     public bool AttackPressed { get; private set; }
 
+    // True only on the single frame the interact key was pressed
+    public bool InteractPressed { get; private set; }
+
     private GameInput _gameInput;
 
     private void Awake()
@@ -50,5 +53,6 @@ public class PlayerInputReader : MonoBehaviour
         SprintHeld = _gameInput.Player.Sprint.IsPressed();
         JumpPressed = _gameInput.Player.Jump.WasPressedThisFrame();
         AttackPressed = _gameInput.Player.Attack.WasPressedThisFrame();
+        InteractPressed = _gameInput.Player.Interact.WasPressedThisFrame();
     }
 }

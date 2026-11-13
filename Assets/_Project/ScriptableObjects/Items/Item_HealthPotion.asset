@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8368517d3fefb94c824c6143a2daf75, type: 3}
+  m_Name: Item_HealthPotion
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemId: potion_heath
+  displayName: Health Potion
+  description: Restore 120 HP
+  icon: {fileID: 21300000, guid: e52ea25af699fd445b7046374f81a5b9, type: 3}
+  itemType: 1
+  maxStackSize: 10
+  buyPrice: 10
+  sellPrice: 5
+  worldPrefab: {fileID: 8169859487305930896, guid: b14ab091a92086d4bb3d3708a5cc847f, type: 3}

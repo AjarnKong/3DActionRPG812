@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8368517d3fefb94c824c6143a2daf75, type: 3}
+  m_Name: Item_Gemstone
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemId: gemstone
+  displayName: Gemstone
+  description: Gemstone
+  icon: {fileID: 21300000, guid: e7d29a79bc7fae248887c8a08a160303, type: 3}
+  itemType: 2
+  maxStackSize: 20
+  buyPrice: 0
+  sellPrice: 60
+  worldPrefab: {fileID: 282515134718096121, guid: 6d5a3e7aab8a1d54ba0ba10db8525db2, type: 3}
