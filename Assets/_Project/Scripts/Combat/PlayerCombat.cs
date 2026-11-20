@@ -16,7 +16,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float comboResetTime = 1.5f;
 
     [Header("Damage")]
-    [SerializeField] private int baseDamage = 10;
+    //[SerializeField] private int baseDamage = 10;
+    [SerializeField] private EquipmentManager equipment;
 
     private static readonly int AttackHash = Animator.StringToHash("Attack");
     private static readonly int ComboIndexHash = Animator.StringToHash("ComboIndex");
@@ -62,7 +63,8 @@ public class PlayerCombat : MonoBehaviour
     /// </summary> 
     private void OnAttackWindowOpen()
     {
-        weaponDealer.BeginSwing(baseDamage);
+        //weaponDealer.BeginSwing(baseDamage);
+        weaponDealer.BeginSwing(equipment.TotalAttackPower);
     }
 
     /// <summary> 

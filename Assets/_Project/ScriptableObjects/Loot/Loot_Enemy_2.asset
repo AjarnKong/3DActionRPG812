@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66233ae7823330348b807a89ff481038, type: 3}
+  m_Name: Loot_Enemy_2
+  m_EditorClassIdentifier: Assembly-CSharp::LootTable
+  entries:
+  - item: {fileID: 11400000, guid: a111f76e915db5d4fbe39fb8b1bb9b35, type: 2}
+    minAmount: 2
+    maxAmount: 4
+    weight: 60
+  - item: {fileID: 11400000, guid: ca3fbaa02cabcae41b4c2b3e7a918122, type: 2}
+    minAmount: 1
+    maxAmount: 1
+    weight: 30
+  - item: {fileID: 11400000, guid: edca784c5e133cc44a9bf0186005ffc4, type: 2}
+    minAmount: 1
+    maxAmount: 2
+    weight: 10
+  dropChance: 0.9

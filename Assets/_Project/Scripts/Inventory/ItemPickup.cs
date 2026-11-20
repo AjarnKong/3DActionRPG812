@@ -28,7 +28,7 @@ public class ItemPickup : MonoBehaviour, IInteractable
     }
     public void Interact(GameObject interactor)
     {
-        /*
+        
         if (!interactor.TryGetComponent(out InventorySystem inventory))
         {
             return;
@@ -39,7 +39,7 @@ public class ItemPickup : MonoBehaviour, IInteractable
             return;
         }
         Destroy(gameObject);
-        */
+        
     }
     // Lets the loot system configure a freshly spawned pickup
     public void Setup(ItemData newItem, int newAmount)
